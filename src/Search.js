@@ -4,9 +4,11 @@ const Search = ({setSearch,setPageNumber}) => {
         setPageNumber(1);
     }
     return (
-        <form action="" className="my-5 d-flex justify-content-center gap-4">
-            <input onChange={search} className="form-control w-50 search-input box-shadow" list="datalistOptions" id="exampleDataList" placeholder="Type to search..."></input>
-            <button onClick={e=> e.preventDefault()} className="btn btn-primary fs-5 box-shadow search-button">
+        <form action="" className="mb-5 d-flex justify-content-center gap-4 align-items-center flex-column flex-sm-row">
+            <input onChange={search} className="search-bar form-control search-input box-shadow" list="datalistOptions" id="exampleDataList" placeholder="Type to search..."></input>
+            <button style={{
+                width:"fit-content"
+            }} onClick={e=> e.preventDefault()} className="btn btn-primary fs-5 box-shadow search-button">
                 Search
             </button>
         </form>

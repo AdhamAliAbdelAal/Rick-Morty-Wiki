@@ -16,10 +16,9 @@ const Filter = ({setPageNumber,setStatus,setSpecies,setGender}) => {
             parameters: ["Female", "Male", "Genderless", "Unknown"],
             setCategory:setGender
         }
-
     ]
     return (
-        <div className="col-3">
+        <div className="col-12 col-lg-3 mb-5">
             <div className="text-center fw-bold fs-4 mb-2">
                 Filters
             </div>
@@ -30,6 +29,7 @@ const Filter = ({setPageNumber,setStatus,setSpecies,setGender}) => {
                     setSpecies("");
                     setGender("");
                     window.location.reload();
+                    //navigate('/');
                 }
             } className="text-center fs-6 text-decoration-underline text-primary mb-3" style={{
                 cursor: "pointer"

@@ -9,36 +9,59 @@ code {
     monospace;
 }
 
-.ubuntu
-{
-  font-family:"Ubuntu"!important;
+.ubuntu {
+  font-family: "Ubuntu" !important;
 }
 
-.card-div
-{
+.card-div {
   border: 2px solid #0d6efd;
   border-radius: 10px;
 }
-.card-image
-{
+
+.card-image {
   border-radius: 10px 10px 0 0;
 }
+
 .badge {
-  top: 6px; right: 8px;
+  top: 6px;
+  right: 8px;
   font-size: 17px !important;
 }
-.search-input
-{
+
+.search-input {
   border: 2px solid #0d6efd !important;
 }
-.search-input:focus
-{
+
+.search-input:focus {
   box-shadow: none !important;
 }
 
 
-.box-shadow
-{
+.box-shadow {
   box-shadow: 1px 3px 9px #00000069;
   box-sizing: border-box;
+}
+
+.nav-link {
+  font-size: 20px !important;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #0b5ed7 !important;
+  border-bottom: 3px solid #0b5ed7 !important;
+}
+
+.search-bar {
+  width: 50% !important;
+}
+
+@media(max-width:576px) {
+  .search-bar {
+    width: 80% !important;
+  }
+  .page-btn
+  {
+    display: none !important;
+  }
 }

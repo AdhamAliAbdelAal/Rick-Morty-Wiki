@@ -1,6 +1,7 @@
 
 
 const FilterButtons = ({ parameters,category,setPageNumber,setCategory }) => {
+    //console.log(category);
     return (
         <div className="accordion-body d-flex flex-wrap gap-3">
             {parameters.map((parameter) => {
