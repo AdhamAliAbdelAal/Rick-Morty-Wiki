@@ -65,3 +65,12 @@ code {
     display: none !important;
   }
 }
+
+::-webkit-scrollbar{
+  width:15px;
+}
+::-webkit-scrollbar-thumb
+{
+  background-color: #0b5ed7;
+  border-radius: 3px;
+}

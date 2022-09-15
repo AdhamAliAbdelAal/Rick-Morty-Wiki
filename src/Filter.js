@@ -1,4 +1,5 @@
 import FilterButtons from "./FilterButtons";
+import {useState} from 'react';
 const Filter = ({setPageNumber,setStatus,setSpecies,setGender}) => {
     const categories = [
         {
@@ -16,7 +17,8 @@ const Filter = ({setPageNumber,setStatus,setSpecies,setGender}) => {
             parameters: ["Female", "Male", "Genderless", "Unknown"],
             setCategory:setGender
         }
-    ]
+    ];
+    const [filterFlag,setFilterFlag]=useState(0);
     return (
         <div className="col-12 col-lg-3 mb-5">
             <div className="text-center fw-bold fs-4 mb-2">
@@ -28,7 +30,8 @@ const Filter = ({setPageNumber,setStatus,setSpecies,setGender}) => {
                     setStatus("");
                     setSpecies("");
                     setGender("");
-                    window.location.reload();
+                    setFilterFlag(!filterFlag);
+                    //window.location.reload();
                     //navigate('/');
                 }
             } className="text-center fs-6 text-decoration-underline text-primary mb-3" style={{
@@ -47,7 +50,7 @@ const Filter = ({setPageNumber,setStatus,setSpecies,setGender}) => {
                                     </button>
                                 </h2>
                                 <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <FilterButtons parameters={x.parameters} category={x.category} setPageNumber={setPageNumber}  setCategory={x.setCategory}/>
+                                    <FilterButtons parameters={x.parameters} category={x.category} setPageNumber={setPageNumber}  setCategory={x.setCategory} filterFalg={filterFlag}/>
                                 </div>
                             </div>
                         )
@@ -59,7 +62,7 @@ const Filter = ({setPageNumber,setStatus,setSpecies,setGender}) => {
                                 </button>
                             </h2>
                             <div id={`collapse${index}`} className="accordion-collapse collapse" aria-labelledby={`heading${index}`} data-bs-parent="#accordionExample">
-                                <FilterButtons parameters={x.parameters} category={x.category} setPageNumber={setPageNumber}  setCategory={x.setCategory}  />
+                                <FilterButtons parameters={x.parameters} category={x.category} setPageNumber={setPageNumber}  setCategory={x.setCategory}  filterFalg={filterFlag} />
                             </div>
                         </div>
                     )
